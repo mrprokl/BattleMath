@@ -56,3 +56,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 - [YOLO](https://pjreddie.com/darknet/yolo/)
 - [OpenCV](https://opencv.org/)
+
+# Authors 
+Thomas & Matteo

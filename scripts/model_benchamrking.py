@@ -4,6 +4,8 @@ from ultralytics import models
 import time
 # import pandas as pd
 
+# IMAGE_FOLDER = "../images
+
 def main():
     model_name_list = ["yolov3.pt","yolov5n.pt", "yolov8s.pt","yolov8n.pt", "yolov8s.pt", "yolov8m.pt", "yolov8l.pt"]
     model_list = []

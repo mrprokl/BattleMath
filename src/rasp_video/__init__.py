@@ -20,7 +20,7 @@ class RaspberryPiVideoProcessor:
         )
         self.picam2.configure(config)
 
-        self.net = cv2.dnn.readNetFromDarknet("yolov3.cfg", "yolov3.weights")
+        self.net = cv2.dnn.readNetFromDarknet("BattleMath/models/yolov3.cfg", "BattleMath/models/yolov3.weights")
         self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
         self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 

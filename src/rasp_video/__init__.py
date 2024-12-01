@@ -1,8 +1,8 @@
-try:
-    from picamera2 import Picamera2, Preview
-except ImportError:
-    NO_PICAMERA = True
-    print("picamera not installed!!")
+# try:
+from picamera2 import Picamera2, Preview
+# except ImportError:
+#     NO_PICAMERA = True
+#     print("picamera not installed!!")
 import cv2
 import numpy as np
 import time

@@ -16,10 +16,13 @@ class RaspberryPiVideoProcessor:
         self.picam2.configure(config)
 
     def start_pure_video(self):
-        self.picam2.start(show_preview=True)
+        self.picam2.start()
         time.sleep(1)  # Warm-up time
         try:
             while True:
+
+                cv2.imshow("Raw Video", self.picam2.capture_array())
+
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
         finally:

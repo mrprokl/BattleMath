@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import time
 import threading
+from icecream import ic
 
 class RaspberryPiVideoProcessor:
     def __init__(self, resolution=(640, 480), framerate=30):
@@ -88,10 +89,11 @@ class RaspberryPiVideoProcessor:
         blob = cv2.dnn.blobFromImage(frame, 1/255.0, (416, 416), swapRB=True, crop=False)
         self.net.setInput(blob)
         detections = self.net.forward()
+        ic(detections)
 
         return self._parse_detections(detections, frame)
     
-    def _parse_detections(self, detections, frame):
+    def _parse_detections(self, detections, frame) -> list:
         height, width = frame.shape[:2]
         confidence_threshold = 0.5
         nms_threshold = 0.4
